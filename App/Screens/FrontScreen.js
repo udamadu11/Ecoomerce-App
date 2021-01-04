@@ -1,15 +1,15 @@
 import React from 'react';
-import { Alert, Button, Image, ImageBackground , StyleSheet , Text ,View} from 'react-native';
-
+import { Alert, Image, ImageBackground , StyleSheet , Text ,View} from 'react-native';
+import Button from '../component/Button';
 function FrontScreen() {
     return (
-       <ImageBackground source={require("../Assets/visa.jpg")} style={styles.background}>
-           <View style={styles.view}>
-            <Text style={styles.leftButton} onPress={()=>Alert.alert('clicked')}>Sign Up</Text>
-            <Text style={styles.RightButton} onPress={()=>Alert.alert('clicked')}>Login</Text>
+       <ImageBackground 
+        source={require("../Assets/visa.jpg")} 
+        style={styles.background}>
+           <View style={styles.buttonContainer}>
+                <Button title='login' />
+                <Button title='Sign Up' color='Green'/>
            </View>
-           {/* <Button title="Sign Up" color="green" onPress={()=>Alert.alert('clicked')}/>
-           <Button title="login" style={styles.loginButton} onPress={()=>Alert.alert('clicked')}/> */}
        </ImageBackground>
     );
 }
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     background:{
         flex:1,
         justifyContent:'flex-end',
+        alignItems:'center'
     },
     text:{
         color:'white',
@@ -25,27 +26,9 @@ const styles = StyleSheet.create({
         alignSelf:'center',
         bottom:25,
     },
-    leftButton:{
-        width:150,
-        padding:10,
-        fontSize:18,
-        textAlign:'center',
-        backgroundColor:'green',
-        height: 50,
-        color:'white',
-        bottom:10,
-        marginLeft:20
-    },
-    RightButton:{
-        width:150,
-        padding:10,
-        fontSize:18,
-        textAlign:'center',
-        backgroundColor:'#2a6fdb',
-        height: 50,
-        color:'white',
-        bottom:10,
-        marginRight:20
+    buttonContainer:{
+        padding:20,
+        width: '100%'
     },
     view:{
         flexDirection: 'row',
