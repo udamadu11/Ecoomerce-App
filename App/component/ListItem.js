@@ -24,7 +24,8 @@ function ListItem({title,subtitle,image,onPress,renderRightActions,ImageComponen
 const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
-        padding: 10
+        padding: 5,
+        backgroundColor:"white"
     }
     ,imageStyle:{
         width:70,
