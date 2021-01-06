@@ -1,11 +1,13 @@
 import React from 'react';
 import {Image, Text, View, StyleSheet} from 'react-native';
 import colors from '../config/color';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 function ViewImageScreen(props) {
     return (
             <View style={styles.container}>
-                <View style={styles.closeButton}></View>
-                <View style={styles.deleteButton}></View>
+                <Icon name='close' size={50} color="#fff" style={styles.closeButton}/>
+                <Icon name='delete' size={50} color="#fff" style={styles.deleteButton}/>
+               
                 <Image 
                     style = {styles.image}
                     source={require("../Assets/card.jpg")}
@@ -27,14 +29,12 @@ const styles = StyleSheet.create({
     closeButton:{
         width:50,
         height: 50,
-        backgroundColor: colors.blue,
         left:10,
         top: 10,
     },
     deleteButton:{
         width:50,
         height: 50,
-        backgroundColor: colors.red,
         right:10,
         top: 10,
         position:'absolute'

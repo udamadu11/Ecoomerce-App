@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-import Card from './App/component/Card';
-import FrontScreen from './App/Screens/FrontScreen';
-import ListingDetailsIcon from './App/Screens/ListingDetailsIcon';
-import MessageScreen from './App/Screens/MessageScreen';
-import ViewImageScreen from './App/Screens/ViewImageScreen';
+
+import Screen from './App/component/Screen';
+import Icon from './App/component/MaterialIcon';
+import ListItem from './App/component/ListItem';
 
 export default class App extends Component {
 
    render() {
-     return <MessageScreen />
+     return (
+       <Screen>
+          <ListItem 
+            title="Udara"
+            ImageComponent={<Icon 
+              name="email"
+              size={50}
+              backgroundColor="red"
+            />}
+          />
+       </Screen>
+     )
+       
+     
    }
 }
