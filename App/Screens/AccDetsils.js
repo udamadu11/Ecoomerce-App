@@ -47,7 +47,7 @@ function AccDetsils(props) {
                 title={item.title}
                 ImageComponent={<MaterialIcon 
                 name={item.MaterialIcon.name}
-                size={70} 
+                size={60} 
                 backgroundColor="#C3D8E8" 
                 iconColor="black"
                 />}
@@ -58,7 +58,7 @@ function AccDetsils(props) {
             <ListItem         
                 title="Logout"
                 ImageComponent={
-                <MaterialIcon name='login' size={70} backgroundColor="#C3D8E8" iconColor="black" />}
+                <MaterialIcon name='login' size={60} backgroundColor="#C3D8E8" iconColor="black" />}
             />
 
         
