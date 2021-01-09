@@ -5,8 +5,7 @@ import MaterialIcon from './MaterialIcon';
 import PickerItem from './PickerItem';
 
 
-
-function AppPicker({icon,items,onSelected,placeholder,selectedItem}) {
+function AppPicker({icon,items,onSelected,placeholder,selectedItem,PickerItemComponent=PickerItem,numColumns}) {
     const [modalVisible, setModalVisible] = useState(false);
     return (
     <>
@@ -21,11 +20,13 @@ function AppPicker({icon,items,onSelected,placeholder,selectedItem}) {
        </View>
     </TouchableWithoutFeedback>
     <Modal visible={modalVisible} animationType="slide">
-        <Button title='close' onPress={()=>setModalVisible(false)} backgroundColor='white'/>
+    <Button title='close' onPress={()=>setModalVisible(false)} backgroundColor='white'/>
         <FlatList 
             data={items}
             keyExtractor={item => item.value.toString()}
-            renderItem={({item})=><PickerItem 
+            numColumns={numColumns}
+            renderItem={({item})=><PickerItemComponent
+            item={item}
             label = {item.label}
             onPress={()=>
                 {

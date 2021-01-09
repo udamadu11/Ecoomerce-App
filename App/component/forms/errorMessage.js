@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
-function errorMessage({error}) {
-    if(!error) return null;
+function errorMessage({error,visible}) {
+   if(!visible || !error) return null;
     return (
        <Text style={styles.text}>{error}</Text>
     );

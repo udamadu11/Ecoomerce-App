@@ -2,7 +2,6 @@ import React from 'react';
 import { FlatList, StyleSheet,View } from 'react-native';
 import ListItem from '../component/ListItem';
 import MaterialIcon from '../component/MaterialIcon';
-import Screen from '../component/Screen';
 import SeperateItems from '../component/SeperateItem';
 const data = [
     {

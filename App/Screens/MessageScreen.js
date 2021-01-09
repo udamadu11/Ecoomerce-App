@@ -38,13 +38,13 @@ function MessageScreen(props) {
                  subtitle ={item.subtitle}
                  image = {item.image}
                  onPress={() => console.log({item})}
-                //  renderRightActions={()=> 
-                //      <View
-                //      Style={{
-                //        backgroundColor: 'blue', justifyContent: 'center',width:100
-                //      }}
-                //      />
-                // }
+                 renderRightActions={()=> 
+                     <View
+                     Style={{
+                       backgroundColor: 'blue', justifyContent: 'center',width:100
+                     }}
+                     />
+                }
              /> }
              ItemSeparatorComponent={SeperateItem}
             

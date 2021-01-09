@@ -1,8 +1,10 @@
 import React from 'react';
-import LoginScreen from './App/Screens/LoginScreen';
+import ListingEditDetails from './App/Screens/ListingEditDetails';
+
+
 
 
 export default function App() {
-     return <LoginScreen />;
+     return <ListingEditDetails />;
 }
 
